@@ -1,0 +1,68 @@
+import java.util.*;
+/**
+ *
+ * @author Farah Aljoubori
+ */
+public class Grades 
+{
+    
+ public static void main (String[] main)
+ {
+     grade();
+ }
+ 
+ public static void grade ()
+  {
+       int [] Mark = new int [5];
+       int total =0; 
+       int avrage; 
+       
+      Scanner scan = new Scanner (System.in);
+      
+      for (int i =0; i < Mark.length; i++)
+      {
+          System.out.println("Please enter your grade");
+          Mark[i] = scan.nextInt();
+          total = total + Mark[i];
+      }
+      
+      scan.close();
+      avrage = total / 5; 
+      
+      System.out.println("your final grade is " + avrage);
+      
+      if (avrage == 100)
+      { 
+           System.out.println("Well done you have achived A* ");
+      }
+      else if (avrage >= 90.99)
+      { 
+           System.out.println("you have achived A");
+      }
+      else if (avrage >= 80.99)
+      { 
+           System.out.println("you have achived B");
+      }
+      else if (avrage >= 70.99)
+      { 
+           System.out.println("you have achived C");
+      }
+      else if (avrage >= 60.99)
+      { 
+           System.out.println("you have achived D");
+      }
+       else if (avrage >= 50.99)
+      { 
+           System.out.println("you have achived E");
+      }
+          else if (avrage >= 40.99)
+      { 
+           System.out.println("Sorry you have faild ");
+      }
+          else 
+          {
+              System.err.println("Sorry Please make sure you enter your garde correctly ");
+          }
+      
+  }
+}
